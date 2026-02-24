@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISSILE COMMAND - 1980 ARCHIVE</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="crt-container">
+        <div class="scanlines"></div>
+        <div class="screen-glow"></div>
+
+        <header>
+            <h1>MISSILE COMMAND</h1>
+            <div style="font-size: 0.6rem; margin-top:5px; color: var(--neon-blue);">ATARI 1980 SYSTEM</div>
+        </header>
+
+        <nav>
+            <button onclick="showPage('home')" class="active">HOME</button>
+            <button onclick="showPage('demo')">LIVE DEMO</button>
+            <button onclick="showPage('tutorial')">TUTORIAL</button>
+            <button onclick="showPage('gamers')">TOP GAMERS</button>
+            <button onclick="showPage('updates')">UPDATES</button>
+        </nav>
+
+        <main>
+            <!-- HOME PAGE -->
+            <div id="home" class="page active">
+                <h2>GAME DESCRIPTION</h2>
+                <p>
+                    <strong>YEAR:</strong> 1980<br>
+                    <strong>DEVELOPER:</strong> Atari, Inc.<br>
+                    <strong>DESIGNER:</strong> Dave Theurer
+                </p>
+                <p>
+                    The world is under attack! Six cities are being bombarded by an endless barrage of nuclear missiles. As the commander of three anti-missile batteries, you are the last line of defense.
+                </p>
+                <p>
+                    Missile Command is a fixed shooter arcade game. It features a unique trackball control scheme and a strategic element where players must manage limited ammunition while protecting multiple targets. The game is famous for its Cold War themes and the lack of a "winning" state—the game only ends when all cities are destroyed.
+                </p>
+                
+                <div style="text-align: center;">
+                    <a href="https://archive.org/details/atari_missile_command" target="_blank" class="real-game-btn">
+                        PLAY REAL GAME ON ARCHIVE.ORG
+                    </a>
+                </div>
+            </div>
+
+            <!-- DEMO PAGE -->
+            <div id="demo" class="page">
+                <h2>SYSTEM SIMULATION</h2>
+                <p style="text-align: center;">Click on the screen to launch interceptors.</p>
+                <canvas id="gameCanvas" width="600" height="400"></canvas>
+                <div class="game-ui">
+                    SCORE: <span id="score">0</span> | CITIES: <span id="cities">6</span> | MISSILES: <span id="ammo">30</span>
+                </div>
+                <p style="text-align: center; font-size: 0.6rem; color: #666;">*This is a simplified browser simulation.</p>
+            </div>
+
+            <!-- TUTORIAL PAGE -->
+            <div id="tutorial" class="page">
+                <h2>MISSION BRIEFING</h2>
+                <p><strong>1. THE THREAT:</strong> Enemy ICBMs are launched from the top of the screen. They travel in arcs toward your cities or your batteries.</p>
+                <p><strong>2. INTERCEPTORS:</strong> Use the trackball (or mouse) to aim your crosshair. Press the fire button to launch an interceptor missile from your battery.</p>
+                <p><strong>3. EXPLOSIONS:</strong> The interceptor does not hit the enemy directly. It creates a large explosion cloud. If an enemy missile passes through this cloud, it is destroyed.</p>
+                <p><strong>4. SMART BOMBS:</strong> Later levels introduce MIRVs (Multiple Re-entry Vehicles) and Satellites. MIRVs split into multiple warheads. Smart Bombs create massive explosions but are rare.</p>
+                <p><strong>5. GAME OVER:</strong> If all 6 cities are destroyed, the game ends. Survive as long as possible!</p>
+            </div>
+
+            <!-- TOP GAMERS PAGE -->
+            <div id="gamers" class="page">
+                <h2>HALL OF FAME</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>RANK</th>
+                            <th>PLAYER</th>
+                            <th>SCORE</th>
+                            <th>DATE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>SCOTT</td>
+                            <td>1,300,150</td>
+                            <td>1982</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>RICKEY</td>
+                            <td>1,100,000</td>
+                            <td>1981</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>D. THEURER</td>
+                            <td>950,000</td>
+                            <td>1980</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>BOB</td>
+                            <td>875,200</td>
+                            <td>1983</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>YOU?</td>
+                            <td>0</td>
+                            <td>TODAY</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- UPDATES PAGE -->
+            <div id="updates" class="page">
+                <h2>FUTURE UPDATES & SNEAKS</h2>
+                <div style="border: 1px solid var(--neon-blue); padding: 10px; margin-bottom: 10px;">
+                    <h3 style="color: var(--neon-red); margin-top:0;">PATCH 1.0.4 - PENDING</h3>
+                    <ul>
+                        <li>Fixed graphical glitch on Level 14.</li>
+                        <li>Added high score persistence to EEPROM.</li>
+                        <li>Adjusted MIRV split timing.</li>
+                    </ul>
+                </div>
+                <div style="border: 1px dashed var(--neon-green); padding: 10px;">
+                    <h3 style="margin-top:0;">SNEAK PEEK: MISSILE COMMAND II</h3>
+                    <p>Rumors are swirling about a sequel featuring mobile batteries and satellite defense systems. Stay tuned to the Atari wire for more information.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
